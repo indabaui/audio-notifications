@@ -1,11 +1,13 @@
 # Audio Notifications
 
+Uses https://github.com/indabaui/SoundManager2. See SoundManager2 for supported sound formats.
+
 ## to use:
 
-```
+```javascript
 var AudioNotifications = require('audio-notifications')
 var audioNotifications = new AudioNotifications({
-  'soundName': '/path/to/sound/'
+  'soundName': '/path/to/sound.wav'
 })
 
 audioNotifications.onready(function(){
