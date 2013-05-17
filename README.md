@@ -4,7 +4,7 @@ Uses https://github.com/indabaui/SoundManager2. See SoundManager2 for supported 
 
 ## to use:
 
-```
+```javascript
 var audioNotifications = require('audio-notifications')
 
 audioNotifications.prepare.then(function(){
