@@ -4,14 +4,19 @@ Uses https://github.com/indabaui/SoundManager2. See SoundManager2 for supported 
 
 ## to use:
 
-```javascript
-var AudioNotifications = require('audio-notifications')
-var audioNotifications = new AudioNotifications({
-  'soundName': '/path/to/sound.wav'
-})
+```
+var audioNotifications = require('audio-notifications')
 
-audioNotifications.onready(function(){
+audioNotifications.prepare.then(function(){
+  
+  audioNotifications.addSound('soundName', '/path/to/sound.wav');
+  // or
+  audioNotifications.addSounds({
+    'soundName': /path/to/sound.wav'
+  });
+
   audioNotifications.play('soundName');
+
 })
 ```
 
