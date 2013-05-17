@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Audio Notifications - Indaba</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <h1>Audio Notifications</h1>
+    <script src="/build/build.js"></script>
+
+    <script>
+
+      var sounds = {
+        'error':  '/sounds/example/error.wav'
+      , 'whoosh': '/sounds/example/whoosh.wav'
+      , '48000':  '/sounds/example/48000.wav'
+      , 'bleep':  '/sounds/example/bleep.wav'
+      }
+
+      var $ = require('jquery')
+      var AudioNotifications = require('audio-notifications')
+      var audioNotifications = new AudioNotifications(sounds)
+
+      audioNotifications.onready(function(){
+        for (sound in sounds) {
+          $('#sounds').append('<button onclick="audioNotifications.play(\''+sound+'\')">'+sound+'</button>');
+        }
+      });
+
+    </script>
+
+    <div id="sounds">
+    </div>
+
+
+  </body>
+</html>

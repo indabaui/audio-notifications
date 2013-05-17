@@ -1,0 +1,18 @@
+{
+  "name": "audio-notifications",
+  "repo": "indabaui/audio-notifications",
+  "description": "Audio Notifications",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/jquery": "*",    
+    "indabaui/SoundManager2": "*"
+  },
+  "development": {
+  },
+  "license": "MIT",
+  "scripts": [
+    "index.js",
+    "lib/audio-notifications.js"
+  ]
+}
