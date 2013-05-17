@@ -20,7 +20,9 @@
       var $ = require('jquery')
       var audioNotifications = require('audio-notifications')
       
-      audioNotifications.prepare().then(function(){
+      audioNotifications.prepare({
+        volume: 75
+      }).then(function(){
         audioNotifications.addSounds(sounds);
         for (sound in sounds) {
           $('#sounds').append('<button onclick="audioNotifications.play(\''+sound+'\')">'+sound+'</button>');
